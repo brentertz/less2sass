@@ -32,11 +32,11 @@ function error(type, msg){
 
 function write(path, str) {
   if (fs.existsSync(path)) {
-    warn('exists', path);
+    warn('overwrote', path);
   } else {
     log('create', path, '32');
-    fs.writeFileSync(path, str);
   }
+  fs.writeFileSync(path, str);
 }
 
 function isLessFile(filename) {
@@ -94,7 +94,7 @@ function read(filePath) {
   var fullPath = path.resolve(process.cwd(), filePath);
   var stats = fs.statSync(fullPath);
   info('scanning', fullPath);
-  
+
   if (isLessFile(fullPath)) {
     convert(fullPath);
   }

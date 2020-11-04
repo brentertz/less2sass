@@ -12,10 +12,6 @@
     "type": "git",
     "url": "git@github.com:ekryski/less2sass.git"
   },
-  "engines": {
-    "node": "=0.10.x",
-    "npm": "=1.2.x"
-  },
   "bin": {
     "less2sass": "bin/less2sass"
   },
@@ -33,7 +29,6 @@
   },
   "dependencies": {
     "commander": "^2.9.0",
-    "mkdirp": "^0.5.1",
-    "win-fork": "^1.1.1"
+    "mkdirp": "^1.0.4"
   }
 }
